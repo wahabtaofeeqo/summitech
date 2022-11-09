@@ -1,0 +1,10 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "compilerOptions": {
+      "outDir": "build/src",
+      "declaration": false,
+      "noImplicitAny": false
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
