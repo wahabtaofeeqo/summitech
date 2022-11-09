@@ -1,8 +1,0 @@
-{
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "tsc",
-      "post-commit": "git status"
-    }
-  }
-  
