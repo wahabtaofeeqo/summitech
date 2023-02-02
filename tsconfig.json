@@ -3,7 +3,10 @@
     "compilerOptions": {
       "outDir": "build/src",
       "declaration": false,
-      "noImplicitAny": false
+      "noImplicitAny": false,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strictPropertyInitialization": false
     },
     "include": ["src"],
     "exclude": ["node_modules"]

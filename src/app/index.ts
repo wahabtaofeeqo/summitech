@@ -7,8 +7,10 @@ export class App {
 
     constructor() {
         this.express = express();
-        this.routes();
         this.middlewares();
+
+        //
+        this.routes();
     }
 
     middlewares() {

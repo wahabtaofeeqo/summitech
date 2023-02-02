@@ -7,7 +7,7 @@ export class BaseController {
         this.okResponse(res, 'Welcome 🥂!');
     }
 
-    private okResponse = (res: Response, message: string, data: any = null, status: number = HTTP_STATUS.OK) => {
+    protected okResponse = (res: Response, message: string, data: any = null, status: number = HTTP_STATUS.OK) => {
         res.status(status).json({
             status: true,
             message,
@@ -15,11 +15,20 @@ export class BaseController {
         })
     }
 
-    errResponse(res: Response, message: string, error: any, status: number = HTTP_STATUS.BAD_REQUEST) {
+    protected errResponse(res: Response, message: string, error: any = null, status: number = HTTP_STATUS.BAD_REQUEST) {
         res.status(status).json({
             status: false,
             message,
             error
+        })
+    }
+
+    paginateResponse(res: Response, message: any, paginator: any) {
+        res.json({
+            status: false,
+            message,
+            data: paginator.data,
+            meta: paginator.meta,
         })
     }
 }
